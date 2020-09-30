@@ -1,0 +1,11 @@
+.MuiToolbar-root {
+    background: #1976d2
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    .MuiButton-label {
+        color: white;
+    }
+}

@@ -1,5 +1,7 @@
 import { app, BrowserWindow } from "electron";
 
+import { HAHAHA } from './wtf';
+
 declare const ENVIRONMENT: String;
 
 const IS_DEV = ENVIRONMENT == "development";
@@ -35,6 +37,7 @@ function createWindow() {
 
 app.on("ready", () => {
     createWindow();
+    HAHAHA();
 });
 
 app.on('window-all-closed', () => {

@@ -1,0 +1,33 @@
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .collection__card {
+        width: 200px;
+        height: 150px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .menu__button {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                text-overflow: ellipsis;
+                margin-left: 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: inherit;
+            }
+        }
+        .collection__action {
+            .MuiButtonBase-root {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -8,7 +8,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
 
 
-
 // const to avoid typos 
 const DEVELOPMENT = "development";
 const PRODUCTION = "production";
@@ -31,7 +30,7 @@ function createRenderConfig(isDev) {
 
         entry: {
             "polyfill": "@babel/polyfill",
-            "render-process": "./render-process.tsx"
+            "render-process": "../src/client/render-process.tsx"
         },
 
         output: {
@@ -143,7 +142,11 @@ function createMainConfig(isDev) {
         mode: isDev ? DEVELOPMENT : PRODUCTION,
 
         entry: {
-            "main-process": "./main-process.ts"
+            "main-process": "../src/electron/main-process.ts"
+        },
+
+        resolve: {
+            extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
         },
 
         output: {
